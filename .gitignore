@@ -1,0 +1,15 @@
+# OS / éditeur
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs / caches
+*.log
+vendor/
+composer.lock
+
+# Environnements / secrets
+.env
+
+# WAMP/XAMPP fichiers temporaires
+tmp/
