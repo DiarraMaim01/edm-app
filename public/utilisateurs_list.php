@@ -3,6 +3,14 @@ require_once __DIR__.'/../src/db.php';
 require_once __DIR__.'/../src/utils.php';
 page_header('Utilisateurs - Liste');
 
+require_once __DIR__.'/auth.php';
+require_auth();
+
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+if (empty($_SESSION['user'])) {
+  header('Location: /edmApp/public/login.php?error=2'); exit;
+}
+
 // TODO: plus tard => vérifier la session & rôle (admin/chef)
 $pdo = db();
 //  SELECT * FROM utilisateur ORDER BY id DESC

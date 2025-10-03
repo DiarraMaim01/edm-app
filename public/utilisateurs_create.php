@@ -10,6 +10,7 @@ page_header('Utilisateurs - Nouveau');
   <label>Prénom<input type="text" name="prenom" required></label><br>
   <label>Matricule<input type="text" name="matricule" required></label><br>
   <label>Email<input type="email" name="email" required></label><br>
+  <label>Mot de passe<input type="password" name="password" required></label><br>
   <label>Téléphone<input type="text" name="telephone"></label><br>
   <label>Rôle
     <select name="role" required>
