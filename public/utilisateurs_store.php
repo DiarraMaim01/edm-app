@@ -2,7 +2,9 @@
 require_once __DIR__.'/../src/db.php';
 // TODO: plus tard => require auth.php + roles.php + requireRole(['ADMINISTRATEUR'])
 // (on laisse l'accès libre pour l'instant le temps de mettre l'auth en place)
-
+require_once __DIR__.'/auth.php';
+require_auth();
+require_role(['ADMINISTRATEUR']);
 // Redirige si l'appel n'est pas en POST (sécurité basique)
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   header('Location: utilisateurs_list.php'); 

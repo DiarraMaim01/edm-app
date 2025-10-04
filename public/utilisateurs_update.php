@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__.'/../src/db.php';
 // TODO: plus tard => require _auth.php + _roles.php + requireRole(['ADMINISTRATEUR'])
-
+require_once __DIR__.'/auth.php';
+require_auth();
+require_role(['ADMINISTRATEUR']);
 // TODO: lire $_GET['id'] et $_POST[...] puis faire UPDATE utilisateur SET ...
 
 

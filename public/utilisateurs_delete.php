@@ -2,7 +2,9 @@
 require_once __DIR__.'/../src/db.php';
 
 // (plus tard) require _auth.php + _roles.php + requireRole(['ADMINISTRATEUR'])
-
+require_once __DIR__.'/auth.php';
+require_auth();
+require_role(['ADMINISTRATEUR']);
 //  lire $_GET['id'] puis faire DELETE FROM utilisateur WHERE id=...
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 if ($id <= 0) {

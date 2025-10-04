@@ -2,6 +2,9 @@
 require_once __DIR__.'/../src/utils.php';
 page_header('Utilisateurs - Nouveau');
 // TODO: plus tard => require _auth.php + _roles.php + requireRole(['ADMINISTRATEUR'])
+require_once __DIR__.'/auth.php';
+require_auth();
+require_role(['ADMINISTRATEUR']);
 ?>
 <h1>Créer un utilisateur</h1>
 

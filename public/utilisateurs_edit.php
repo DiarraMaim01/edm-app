@@ -3,7 +3,9 @@ require_once __DIR__.'/../src/db.php';
 require_once __DIR__.'/../src/utils.php';
 page_header('Utilisateurs - Modifier');
 // TODO: plus tard => require _auth.php + _roles.php + requireRole(['ADMINISTRATEUR'])
-
+require_once __DIR__.'/auth.php';
+require_auth();
+require_role(['ADMINISTRATEUR']);
 // TODO: récupérer ?id=... via $_GET['id']
 
 // TODO: SELECT ... WHERE id=? et préremplir le formulaire
